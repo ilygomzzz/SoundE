@@ -1,0 +1,168 @@
+:root {
+    --subtitle-size: 1.3em;
+    --title-size: 1.9em;
+    --h2-size: 1.6em;
+    --pink: #d103d1;
+    --gray: #404040;
+    --border-radius:8px;
+}
+
+@font-face {
+    font-family: Questrial;
+    src: url(/fonts/Questrial-Regular.ttf);
+}
+
+@font-face {
+    font-family: NotoSans;
+    src: url(/fonts/NotoSans-VariableFont_wdth\,wght.ttf);
+    font-weight: bolder;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+body {
+    margin: 0 20px;
+    background-color: black;
+    color: white;
+}
+
+p {
+    font-family: Questrial;
+    font-size: var(--subtitle-size);
+}
+
+h1 {
+    font-family: NotoSans;
+    align-self: self-start;
+    font-size: var(--title-size);
+}
+
+h2 {
+    font-family: NotoSans;
+    align-self: self-start;
+
+    font-size: var(--h2-size);
+}
+
+header {
+    justify-self: center;
+    width: 80%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+}
+
+.barra {
+    display: none;
+}
+
+.icono {
+    display: none;
+}
+
+.header-hr {
+    justify-self: center;
+    width: 70%;
+    background-color: grey;
+    height: 1px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+footer {
+    min-height: 6vh;
+    position: sticky;
+    z-index: 100;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 5px;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8), rgba(0, 0, 0,1),black);
+}
+
+@media (min-width: 960px) {
+    .logo {
+        margin-left: 20%;
+        max-width: 80px;
+        height: 40px;
+    }
+
+    .barra { /*div que contiene el input y los dos iconos (lupa y biblioteca)*/
+        background-color: white;
+        position: relative;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0 10px;
+    }
+
+    .barra .dualupa{ /*icono de lupa*/
+        width: 23px;
+        height: 23px;
+    }
+
+    .barra .libro{ /*icono de libro, biblioteca o como vrgas le quieran llamar*/
+        width: 23px;
+        height: 23px;
+        padding-left:20px;
+        border-left: 2px solid;
+        border-color: #8c8c8c;
+    }
+
+    .barra input { /*esta pertenece a la barra de buscador*/
+        margin-left: 2%;
+        text-align: left;
+        width: 400px;
+        height: 40px;
+        border: 0;
+        font-size: 1.2em;
+        box-sizing: border-box;
+    }
+
+    input:focus{
+        outline: none;
+        border: none;
+    }
+
+    .icono{ /*este pertenece al icono que se parece a Ronaldo Nazario cuando estaba en su prime, que jugadorazo!!!*/
+        margin-right: 20%;
+        display: block;
+        height: 40px;
+        width: 40px;
+    }
+
+    footer > img {
+        display: none;
+    }
+
+}
+
+@media (max-width: 960px) {
+    .logo {
+        max-width: 100px;
+    }
+
+    footer > img {
+        width: 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    .logo {
+        max-width: 80px;
+    }
+
+    footer > img {
+        width: 30px;
+    }
+}
